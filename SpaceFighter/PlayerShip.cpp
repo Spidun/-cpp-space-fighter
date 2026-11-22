@@ -4,6 +4,9 @@
 
 void PlayerShip::LoadContent(ResourceManager& resourceManager)
 {
+
+	SetSpeed(700);
+
 	ConfineToScreen();
 	SetResponsiveness(0.1);
 

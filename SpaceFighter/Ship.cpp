@@ -1,7 +1,7 @@
 
 #include "Ship.h"
 #include "Level.h"
-
+#include <iostream>
 
 Ship::Ship()
 {
@@ -24,6 +24,8 @@ void Ship::Update(const GameTime& gameTime)
 void Ship::Hit(const float damage)
 {
 	if (m_isInvulnurable) return;
+
+	std::cout << "Ship turned to scrap" << std::endl;
 
 	m_hitPoints -= damage;
 	if (m_hitPoints > 0) return;
